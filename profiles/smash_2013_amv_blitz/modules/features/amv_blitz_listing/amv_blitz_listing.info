@@ -1,0 +1,12 @@
+name = AMV Blitz Listing
+description = List of upcoming Blitz rounds
+core = 7.x
+package = SMASH!
+php = 5.2.4
+version = 7.x-0.1
+project = amv_blitz_listing
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = amv_blitz_rounds
+features_exclude[dependencies][ctools] = ctools

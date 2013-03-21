@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AMV Blitz Login & Display feature.
+ */
+
+include_once 'amv_blitz_login_display.features.inc';

@@ -1,0 +1,92 @@
+<?php
+/**
+ * @file
+ * Code for the AMV Blitz Base feature.
+ */
+
+include_once 'amv_blitz_base.features.inc';
+
+/**
+ * Hide Register link
+ */
+function amv_blitz_base_menu_alter(&$items) {
+  $items['node/%node/register']['access callback'] = FALSE;
+}
+
+/**
+ * Alter some forms
+ */
+function amv_blitz_base_form_alter(&$form, &$form_state, $form_id) {
+  // drupal_set_message($form_id);
+}
+
+/**
+ * Alter some registration forms
+ */
+function amv_blitz_base_form_registration_form_alter(&$form, &$form_state, $form_id) {
+  // drupal_set_message('<pre>' . print_r($form, 1) . '</pre>');
+  
+  $lock_form = FALSE;
+  
+  $entity = &$form['#entity'];
+  if ($entity->entity_type == 'node') {
+    $source_node = node_load($entity->entity_id);
+    
+    // drupal_set_message('<pre>' . print_r($source_node, 1) . '</pre>');
+    
+    $lock_form = !empty($source_node->field_users_in_round);
+  }
+  
+  if ($lock_form) {
+    // drupal_set_message('locking form');
+    $form['field_name'][LANGUAGE_NONE][0]['value']['#type'] = "value";
+  }
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function amv_blitz_base_field_formatter_info() {
+  return array(
+    'helpful_registration_form' => array(
+      'label' => t('Helpful Registration Form'),
+      'field types' => array('registration'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function amv_blitz_base_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  
+  // we know we should only have a single item
+  if (isset($items[0]['registration_type']) && !empty($items[0]['registration_type'])) {
+    $reg_type = registration_type_load($items[0]['registration_type']);
+    $settings = $display['settings'];
+    $label = !empty($settings['label']) ? $settings['label'] : $reg_type->label;
+    
+    switch ($display['type']) {
+      case 'helpful_registration_form':
+        // Enable registration link if accessible.
+        list($entity_id) = entity_extract_ids($entity_type, $entity);
+        if (registration_register_page_access($entity_type, $entity) && registration_status($entity_type, $entity_id)) {
+          $registration = entity_get_controller('registration')->create(array(
+            'entity_type' => $entity_type,
+            'entity_id' => $entity_id,
+            'type' => $reg_type->name,
+          ));
+          $element[0] = drupal_get_form('registration_form', $registration);
+        }
+        else {
+          $element[0] = array(
+            '#markup' => '<div class="warning"><h2>' . t('Registration is currently closed.') . '</h2></div>'
+          );
+        }
+        break;
+    }
+  }
+  
+  return $element;
+}
