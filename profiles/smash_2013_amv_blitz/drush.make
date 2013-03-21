@@ -77,11 +77,3 @@ projects[rules_special_redirects][download][url] = "http://git.drupal.org/projec
 projects[zen][type] = "theme"
 projects[zen][version] = "5.1"
 projects[zen][subdir] = "contrib"
-
-; Libraries
-libraries[profiler][directory_name] = "profiler"
-libraries[profiler][type] = "library"
-libraries[profiler][destination] = "libraries"
-libraries[profiler][download][type] = "get"
-libraries[profiler][download][url] = "http://ftp.drupal.org/files/projects/profiler-7.x-2.x-dev.tar.gz"
-
