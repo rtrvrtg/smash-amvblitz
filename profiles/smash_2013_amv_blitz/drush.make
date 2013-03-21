@@ -70,7 +70,7 @@ projects[views][subdir] = "contrib"
 
 projects[rules_special_redirects][version] = "1.x-dev"
 projects[rules_special_redirects][subdir] = "custom"
-projects[rules_special_redirects][download][url] = "http://git.drupal.org/sandbox/geoffreyr/1945104.git"
+projects[rules_special_redirects][download][url] = "http://git.drupal.org/project/rules_special_redirects.git"
 
 ; Themes
 ; zen
