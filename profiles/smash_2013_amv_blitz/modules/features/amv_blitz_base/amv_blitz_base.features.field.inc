@@ -125,9 +125,9 @@ function amv_blitz_base_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'registration',
+          'module' => 'amv_blitz_base',
           'settings' => array(),
-          'type' => 'registration_form',
+          'type' => 'helpful_registration_form',
           'weight' => '2',
         ),
         'teaser' => array(
