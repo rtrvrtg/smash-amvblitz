@@ -296,7 +296,11 @@ function amv_blitz_base_field_default_fields() {
       'bundle' => 'amv_entry',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Submit a link to your AMV. We recommend that you post it on one of the following services: MediaFire, DepositFiles, etc.
+      'description' => 'Submit a link to your AMV. We recommend that you post it on one of the following services: 
+      <a href="http://www.mediafire.com/" target="_blank">MediaFire</a>, 
+      <a href="http://www.sendspace.com/" target="_blank">SendSpace</a>, 
+      <a href="http://uploading.com" target="_blank">Uploading.com</a>.
+
 Please ensure that your video file follows the <a href="#" target="_blank">AMV Encoding Guidelines</a>.',
       'display' => array(
         'default' => array(
@@ -548,6 +552,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
   t('Please enter your name.');
   t('Please specify a title for your AMV.');
   t('Submit a link to your AMV. We recommend that you post it on one of the following services: MediaFire, DepositFiles, etc.
+
 Please ensure that your video file follows the <a href="#" target="_blank">AMV Encoding Guidelines</a>.');
   t('Title');
   t('Users in Round');
