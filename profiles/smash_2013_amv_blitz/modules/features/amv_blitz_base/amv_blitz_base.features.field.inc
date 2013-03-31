@@ -313,7 +313,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       ),
       'entity_type' => 'registration',
       'field_name' => 'field_amv_file',
-      'label' => 'AMV File',
+      'label' => 'Link to your Blitz entry',
       'required' => 1,
       'settings' => array(
         'attributes' => array(
@@ -340,7 +340,200 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '2',
+        'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'registration-amv_entry-field_amv_group'.
+  $fields['registration-amv_entry-field_amv_group'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_amv_group',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'amv_entry',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'If you are part of a group, fill this in! If your video is shown to the public, then they will know what group is represented! If none, leave blank.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 4,
+        ),
+      ),
+      'entity_type' => 'registration',
+      'field_name' => 'field_amv_group',
+      'label' => 'AMV Group',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'registration-amv_entry-field_country'.
+  $fields['registration-amv_entry-field_country'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_country',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'iso2' => array(
+          0 => 'iso2',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'countries',
+      'settings' => array(
+        'continents' => array(),
+        'countries' => array(),
+        'enabled' => '1',
+        'size' => 5,
+      ),
+      'translatable' => '0',
+      'type' => 'country',
+    ),
+    'field_instance' => array(
+      'bundle' => 'amv_entry',
+      'default_value' => array(
+        0 => array(
+          'iso2' => 'AU',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'countries',
+          'settings' => array(),
+          'type' => 'country_default',
+          'weight' => 5,
+        ),
+      ),
+      'entity_type' => 'registration',
+      'field_name' => 'field_country',
+      'label' => 'Country you are from',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'registration-amv_entry-field_description'.
+  $fields['registration-amv_entry-field_description'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_description',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'amv_entry',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Include your AMV\'s title and a short description.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 6,
+        ),
+      ),
+      'entity_type' => 'registration',
+      'field_name' => 'field_description',
+      'label' => 'Title & Description',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '6',
       ),
     ),
   );
@@ -381,7 +574,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'bundle' => 'amv_entry',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Please enter your name.',
+      'description' => 'Please enter your real name.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -393,7 +586,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       ),
       'entity_type' => 'registration',
       'field_name' => 'field_name',
-      'label' => 'Name',
+      'label' => 'Real Name',
       'required' => 1,
       'settings' => array(
         'text_processing' => '0',
@@ -406,19 +599,19 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => 0,
+        'weight' => '0',
       ),
     ),
   );
 
-  // Exported field: 'registration-amv_entry-field_title'.
-  $fields['registration-amv_entry-field_title'] = array(
+  // Exported field: 'registration-amv_entry-field_nickname'.
+  $fields['registration-amv_entry-field_nickname'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_title',
+      'field_name' => 'field_nickname',
       'field_permissions' => array(
         'type' => '1',
       ),
@@ -447,20 +640,20 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'bundle' => 'amv_entry',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Please specify a title for your AMV.',
+      'description' => 'Please enter the name you want to use throughout SMASH! If you don\'t have one, or want us to use your real name, leave blank.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 1,
+          'weight' => 3,
         ),
       ),
       'entity_type' => 'registration',
-      'field_name' => 'field_title',
-      'label' => 'Title',
-      'required' => 1,
+      'field_name' => 'field_nickname',
+      'label' => 'Nickname',
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -472,7 +665,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '1',
       ),
     ),
   );
@@ -538,23 +731,32 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => 0,
+        'weight' => '0',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('AMV File');
+  t('AMV Group');
   t('Body');
+  t('Country you are from');
   t('Entries');
+  t('If you are part of a group, fill this in! If your video is shown to the public, then they will know what group is represented! If none, leave blank.');
+  t('Include your AMV\'s title and a short description.');
+  t('Link to your Blitz entry');
   t('Name');
-  t('Please enter your name.');
-  t('Please specify a title for your AMV.');
-  t('Submit a link to your AMV. We recommend that you post it on one of the following services: MediaFire, DepositFiles, etc.
+  t('Nickname');
+  t('Please enter the name you want to use throughout SMASH! If you don\'t have one, or want us to use your real name, leave blank.');
+  t('Please enter your real name.');
+  t('Real Name');
+  t('Submit a link to your AMV. We recommend that you post it on one of the following services: 
+      <a href="http://www.mediafire.com/" target="_blank">MediaFire</a>, 
+      <a href="http://www.sendspace.com/" target="_blank">SendSpace</a>, 
+      <a href="http://uploading.com" target="_blank">Uploading.com</a>.
 
 Please ensure that your video file follows the <a href="#" target="_blank">AMV Encoding Guidelines</a>.');
-  t('Title');
+  t('Title & Description');
   t('Users in Round');
 
   return $fields;

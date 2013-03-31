@@ -68,6 +68,9 @@ projects[uuid][subdir] = "contrib"
 projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
+projects[countries][version] = "2.1"
+projects[countrues][subdir] = "contrib"
+
 projects[rules_special_redirects][version] = "1.x-dev"
 projects[rules_special_redirects][subdir] = "custom"
 projects[rules_special_redirects][download][url] = "http://git.drupal.org/project/rules_special_redirects.git"
