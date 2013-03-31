@@ -670,6 +670,131 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
     ),
   );
 
+  // Exported field: 'user-user-field_amv_group'.
+  $fields['user-user-field_amv_group'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_amv_group',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'user',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 3,
+        ),
+      ),
+      'entity_type' => 'user',
+      'field_name' => 'field_amv_group',
+      'label' => 'AMV Group',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => 0,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'user-user-field_country'.
+  $fields['user-user-field_country'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_country',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'iso2' => array(
+          0 => 'iso2',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'countries',
+      'settings' => array(
+        'continents' => array(),
+        'countries' => array(),
+        'enabled' => '1',
+        'size' => 5,
+      ),
+      'translatable' => '0',
+      'type' => 'country',
+    ),
+    'field_instance' => array(
+      'bundle' => 'user',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'countries',
+          'settings' => array(),
+          'type' => 'country_default',
+          'weight' => 1,
+        ),
+      ),
+      'entity_type' => 'user',
+      'field_name' => 'field_country',
+      'label' => 'Country you are from',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => 0,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '4',
+      ),
+    ),
+  );
+
   // Exported field: 'user-user-field_name'.
   $fields['user-user-field_name'] = array(
     'field_config' => array(
@@ -732,6 +857,72 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
         ),
         'type' => 'text_textfield',
         'weight' => '0',
+      ),
+    ),
+  );
+
+  // Exported field: 'user-user-field_nickname'.
+  $fields['user-user-field_nickname'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_nickname',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'user',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 2,
+        ),
+      ),
+      'entity_type' => 'user',
+      'field_name' => 'field_nickname',
+      'label' => 'Nickname',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => 0,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
       ),
     ),
   );
