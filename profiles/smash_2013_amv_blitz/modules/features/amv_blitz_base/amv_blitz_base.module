@@ -24,22 +24,23 @@ function amv_blitz_base_form_alter(&$form, &$form_state, $form_id) {
  * Alter some registration forms
  */
 function amv_blitz_base_form_registration_form_alter(&$form, &$form_state, $form_id) {
-  // drupal_set_message('<pre>' . print_r($form, 1) . '</pre>');
-  
   $lock_form = FALSE;
   
   $entity = &$form['#entity'];
   if ($entity->entity_type == 'node') {
     $source_node = node_load($entity->entity_id);
-    
-    // drupal_set_message('<pre>' . print_r($source_node, 1) . '</pre>');
-    
     $lock_form = !empty($source_node->field_users_in_round);
   }
   
   if ($lock_form) {
-    // drupal_set_message('locking form');
+    // Switch off fields we don't need for subsequent registrations
     $form['field_name'][LANGUAGE_NONE][0]['value']['#type'] = "value";
+    $form['field_nickname'][LANGUAGE_NONE][0]['value']['#type'] = "value";
+    $form['field_amv_group'][LANGUAGE_NONE][0]['value']['#type'] = "value";
+    $form['field_country'][LANGUAGE_NONE][0]['value']['#type'] = "value";
+    
+    $form['field_name'][LANGUAGE_NONE][0]['value']['#required'] = FALSE;
+    $form['field_country'][LANGUAGE_NONE][0]['value']['#required'] = FALSE;
   }
 }
 

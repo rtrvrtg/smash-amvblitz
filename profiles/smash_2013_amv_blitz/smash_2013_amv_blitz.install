@@ -280,3 +280,10 @@ function smash_2013_amv_blitz_install() {
   // ignore any other install messages
   drupal_get_messages();
 }
+
+/**
+ * Add Countries
+ */
+function smash_2013_amv_blitz_update_7001() {
+  module_enable(array('countries'));
+}

@@ -653,7 +653,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'entity_type' => 'registration',
       'field_name' => 'field_nickname',
       'label' => 'Nickname',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,

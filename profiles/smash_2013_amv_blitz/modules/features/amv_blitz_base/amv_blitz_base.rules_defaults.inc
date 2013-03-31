@@ -20,7 +20,10 @@ function amv_blitz_base_default_rules_configuration() {
             "roles" : { "value" : { "1" : "1" } }
           }
         },
-        { "entity_has_field" : { "entity" : [ "registration" ], "field" : "field_name" } }
+        { "entity_has_field" : { "entity" : [ "registration" ], "field" : "field_name" } },
+        { "entity_has_field" : { "entity" : [ "registration" ], "field" : "field_country" } },
+        { "entity_has_field" : { "entity" : [ "registration" ], "field" : "field_nickname" } },
+        { "entity_has_field" : { "entity" : [ "registration" ], "field" : "field_amv_group" } }
       ],
       "DO" : [
         { "entity_create" : {
@@ -38,7 +41,28 @@ function amv_blitz_base_default_rules_configuration() {
             "message" : "We\\u0027ve just sent you some details to help you set up a user account for this site. If you get invited to upcoming Blitz rounds, you\\u0027ll need this account to log in and submit your entry.",
             "type" : "warning"
           }
-        }
+        },
+        { "entity_fetch" : {
+            "USING" : { "type" : "registration", "id" : [ "registration:registration-id" ] },
+            "PROVIDE" : { "entity_fetched" : { "entity_fetched" : "Fetched entity" } }
+          }
+        },
+        { "data_set" : {
+            "data" : [ "new-user:field-nickname" ],
+            "value" : [ "registration:field-nickname" ]
+          }
+        },
+        { "data_set" : {
+            "data" : [ "new-user:field-amv-group" ],
+            "value" : [ "registration:field-amv-group" ]
+          }
+        },
+        { "data_set" : {
+            "data" : [ "new-user:field-country" ],
+            "value" : [ "registration:field-country" ]
+          }
+        },
+        { "entity_save" : { "data" : [ "new-user" ] } }
       ]
     }
   }');
