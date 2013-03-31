@@ -69,7 +69,7 @@ projects[views][version] = "3.5"
 projects[views][subdir] = "contrib"
 
 projects[countries][version] = "2.1"
-projects[countrues][subdir] = "contrib"
+projects[countries][subdir] = "contrib"
 
 projects[rules_special_redirects][version] = "1.x-dev"
 projects[rules_special_redirects][subdir] = "custom"
