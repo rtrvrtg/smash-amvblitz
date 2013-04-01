@@ -74,6 +74,9 @@ projects[countries][subdir] = "contrib"
 projects[rules_special_redirects][version] = "1.0-alpha1"
 projects[rules_special_redirects][subdir] = "custom"
 
+projects[backup_migrate][version] = "2.4"
+projects[backup_migrate][subdir] = "custom"
+
 ; Themes
 ; zen
 projects[zen][type] = "theme"
