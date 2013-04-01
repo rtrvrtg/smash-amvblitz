@@ -1,6 +1,6 @@
 ; Packaging information for smash_2013_amv_blitz
 name = "SMASH! 2013 AMV Blitz"
-description = "Are you the fastest AMV editor in Sydney? Test your might!"
+description = "Make AMVs but short ones ones? Blitz your way to glory!"
 exclusive = "1"
 core = "7.x"
 ; ----------
@@ -36,7 +36,6 @@ dependencies[] = user
 ; Display Suite
 dependencies[] = ds
 dependencies[] = ds_extras
-dependencies[] = ds_ui
 ; Fields
 dependencies[] = entityreference
 dependencies[] = inline_entity_form
@@ -70,7 +69,6 @@ dependencies[] = amv_blitz_content
 dependencies[] = uuid
 ; Views
 dependencies[] = views
-dependencies[] = views_ui
 ; Features
 dependencies[] = features
 dependencies[] = uuid_features

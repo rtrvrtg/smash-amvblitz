@@ -97,7 +97,7 @@ function amv_blitz_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'Are you the fastest AMV editor in Sydney? Test your might!';
+  $strongarm->value = 'Make AMVs but short ones ones? Blitz your way to glory!';
   $export['site_slogan'] = $strongarm;
 
   $strongarm = new stdClass();
