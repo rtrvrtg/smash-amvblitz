@@ -77,6 +77,12 @@ projects[rules_special_redirects][subdir] = "custom"
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = "custom"
 
+projects[boost][version] = "1.0-beta2"
+projects[boost][subdir] = "custom"
+
+projects[filecache][version] = "1.x-dev"
+projects[filecache][subdir] = "custom"
+
 ; Themes
 ; zen
 projects[zen][type] = "theme"
