@@ -91,9 +91,6 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_entries',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(
         'registration_type' => array(
           'columns' => array(
@@ -185,9 +182,6 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_users_in_round',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -267,9 +261,6 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_file',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -358,9 +349,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_group',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -424,9 +412,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_country',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(),
       'indexes' => array(
         'iso2' => array(
@@ -487,9 +472,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_description',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -551,9 +533,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_name',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -617,9 +596,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_nickname',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -683,9 +659,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_group',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -749,9 +722,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_country',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(),
       'indexes' => array(
         'iso2' => array(
@@ -808,9 +778,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_name',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -874,9 +841,6 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_nickname',
-      'field_permissions' => array(
-        'type' => '1',
-      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
