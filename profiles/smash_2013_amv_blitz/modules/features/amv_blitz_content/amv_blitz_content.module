@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the AMV Blitz Content feature.
+ */
+
+include_once 'amv_blitz_content.features.inc';

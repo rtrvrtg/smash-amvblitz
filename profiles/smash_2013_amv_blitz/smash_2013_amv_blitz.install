@@ -287,3 +287,10 @@ function smash_2013_amv_blitz_install() {
 function smash_2013_amv_blitz_update_7001() {
   module_enable(array('countries'));
 }
+
+/**
+ * Add Countries
+ */
+function smash_2013_amv_blitz_update_7002() {
+  module_enable(array('amv_blitz_theme', 'amv_blitz_content'));
+}

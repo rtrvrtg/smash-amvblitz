@@ -1,0 +1,10 @@
+name = AMV Blitz Theme
+core = 7.x
+package = SMASH!
+php = 5.2.4
+version = 7.x-1.0
+project = amv_blitz_theme
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1

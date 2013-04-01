@@ -91,6 +91,9 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_entries',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'registration_type' => array(
           'columns' => array(
@@ -182,6 +185,9 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_users_in_round',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -261,6 +267,9 @@ function amv_blitz_base_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_file',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -349,6 +358,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_group',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -412,6 +424,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_country',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'iso2' => array(
@@ -472,6 +487,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_description',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -533,6 +551,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_name',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -596,6 +617,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_nickname',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -651,6 +675,72 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
     ),
   );
 
+  // Exported field: 'registration-amv_entry-field_title'.
+  $fields['registration-amv_entry-field_title'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_title',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'amv_entry',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Please specify a title for your AMV.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 1,
+        ),
+      ),
+      'entity_type' => 'registration',
+      'field_name' => 'field_title',
+      'label' => 'Title',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
   // Exported field: 'user-user-field_amv_group'.
   $fields['user-user-field_amv_group'] = array(
     'field_config' => array(
@@ -659,6 +749,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_amv_group',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -722,6 +815,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_country',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(),
       'indexes' => array(
         'iso2' => array(
@@ -778,6 +874,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_name',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -828,7 +927,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
@@ -841,6 +940,9 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_nickname',
+      'field_permissions' => array(
+        'type' => '1',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -909,6 +1011,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
   t('Nickname');
   t('Please enter the name you want to use throughout SMASH! If you don\'t have one, or want us to use your real name, leave blank.');
   t('Please enter your real name.');
+  t('Please specify a title for your AMV.');
   t('Real Name');
   t('Submit a link to your AMV. We recommend that you post it on one of the following services: 
 
@@ -921,6 +1024,7 @@ Please ensure that your video file follows the <a href="#" target="_blank">AMV E
 
 
 Please ensure that your video file follows the <a href="#" target="_blank">AMV Encoding Guidelines</a>.');
+  t('Title');
   t('Title & Description');
   t('Users in Round');
 
