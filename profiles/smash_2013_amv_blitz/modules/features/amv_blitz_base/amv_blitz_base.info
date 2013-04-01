@@ -5,7 +5,6 @@ package = SMASH!
 php = 5.2.4
 version = 7.x-0.2
 project = amv_blitz_base
-dependencies[] = amv_blitz_base
 dependencies[] = countries
 dependencies[] = ctools
 dependencies[] = ds

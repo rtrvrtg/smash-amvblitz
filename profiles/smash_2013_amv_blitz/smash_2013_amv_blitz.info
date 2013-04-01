@@ -39,7 +39,6 @@ dependencies[] = ds_extras
 dependencies[] = ds_ui
 ; Fields
 dependencies[] = entityreference
-dependencies[] = field_permissions
 dependencies[] = inline_entity_form
 dependencies[] = link
 ; Other

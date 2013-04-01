@@ -24,11 +24,13 @@ function amv_blitz_base_form_alter(&$form, &$form_state, $form_id) {
  * Alter some registration forms
  */
 function amv_blitz_base_form_registration_form_alter(&$form, &$form_state, $form_id) {
+  dpm($form);
   $lock_form = FALSE;
   
   $entity = &$form['#entity'];
   if ($entity->entity_type == 'node') {
     $source_node = node_load($entity->entity_id);
+    dpm($source_node);
     $lock_form = !empty($source_node->field_users_in_round);
   }
   
