@@ -24,7 +24,7 @@ function amv_blitz_base_form_alter(&$form, &$form_state, $form_id) {
  * Alter some registration forms
  */
 function amv_blitz_base_form_registration_form_alter(&$form, &$form_state, $form_id) {
-  drupal_set_message('<pre>' . print_r($form, 1) . '</pre>');
+  // drupal_set_message('<pre>' . print_r($form, 1) . '</pre>');
   $lock_form = FALSE;
   
   $form['anon_mail']['#title'] = t("Email address");
@@ -34,11 +34,11 @@ function amv_blitz_base_form_registration_form_alter(&$form, &$form_state, $form
   $entity = &$form['#entity'];
   if ($entity->entity_type == 'node') {
     $source_node = node_load($entity->entity_id);
-    drupal_set_message('<pre>' . print_r($source_node, 1) . '</pre>');
+    // drupal_set_message('<pre>' . print_r($source_node, 1) . '</pre>');
     $lock_form = !empty($source_node->field_users_in_round);
   }
   
-  drupal_set_message('<pre>' . print_r($lock_form, 1) . '</pre>');
+  // drupal_set_message('<pre>' . print_r($lock_form, 1) . '</pre>');
   
   if ($lock_form) {
     // Disable email required
