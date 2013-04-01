@@ -59,21 +59,20 @@ projects[token][subdir] = "contrib"
 projects[registration][version] = "1.1"
 projects[registration][subdir] = "contrib"
 
-projects[rules][version] = "2.2"
+projects[rules][version] = "2.3"
 projects[rules][subdir] = "contrib"
 
 projects[uuid][version] = "1.x-dev"
 projects[uuid][subdir] = "contrib"
 
-projects[views][version] = "3.5"
+projects[views][version] = "3.6"
 projects[views][subdir] = "contrib"
 
 projects[countries][version] = "2.1"
 projects[countries][subdir] = "contrib"
 
-projects[rules_special_redirects][version] = "1.x-dev"
+projects[rules_special_redirects][version] = "1.0-alpha1"
 projects[rules_special_redirects][subdir] = "custom"
-projects[rules_special_redirects][download][url] = "http://git.drupal.org/project/rules_special_redirects.git"
 
 ; Themes
 ; zen
