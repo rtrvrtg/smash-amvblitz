@@ -1,8 +1,8 @@
 ; SMASH! 2013 AMV Blitz make file
-core = "7.22"
+core = "7.32"
 api = "2"
 ; comment this out in to use on drupal.org
-projects[drupal][version] = "7.22"
+projects[drupal][version] = "7.32"
 
 ; Modules
 projects[ctools][version] = "1.3"
